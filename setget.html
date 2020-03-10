@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>set get value</title>
+        <link rel="stylesheet" href="aset/css/bootstrap.min.css">
+        <script src="aset/js/jquery.min.js"></script>
+        <script src="aset/js/popper.min.js"></script>
+        <script src="aset/js/bootstrap.js"></script>
+        <script type="text/javascript">
+            count = () =>{
+                //get value
+                let panjang = document.getElementById('panjang').value;
+                let lebar = document.getElementById('lebar').value;
+                let hasil = panjang * lebar;
+
+                // set value
+                document.getElementById('hasil').value = hasil;
+            }
+        </script>
+        <style>
+            .container{
+                float: center;
+                position: sticky;
+                margin-left: 35%;
+                margin-right: 25%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" >
+            <div class="card col-sm-4">
+                <div class="card-header">
+                    <h4>hitung luas persegi panjang</h4>
+                </div>
+                <div class="card-body">
+                    Panjang
+                    <input type="number" id="panjang" class="form-control">
+                    Lebar
+                    <input type="number" id="lebar" class="form-control">
+                    <br>
+                    <button type="button" class="btn btn-info btn-block" onclick="count()">
+                    Hitung</button><br> 
+                    Hasil
+                    <input type="text" id="hasil" class="form-control" readonly>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
